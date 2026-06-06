@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Student Profile Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Advanced Student Profile Generator</h1>
+
+    <!-- Name -->
+    <input
+        type="text"
+        id="name"
+        placeholder="Enter Student Name"
+    >
+
+    <!-- Age -->
+    <input
+        type="number"
+        id="age"
+        placeholder="Enter Age"
+    >
+
+    <!-- Department -->
+    <input
+        type="text"
+        id="dept"
+        placeholder="Enter Department"
+    >
+
+    <!-- College -->
+    <input
+        type="text"
+        id="college"
+        placeholder="Enter College Name"
+    >
+
+    <!-- State -->
+    <select id="state">
+        <option value="">Select State / UT</option>
+
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+        <option>Delhi</option>
+        <option>Puducherry</option>
+        <option>Ladakh</option>
+    </select>
+
+    <!-- City -->
+    <select id="city">
+        <option value="">Select City</option>
+
+        <option>Chennai</option>
+        <option>Coimbatore</option>
+        <option>Madurai</option>
+        <option>Tiruchirappalli</option>
+        <option>Salem</option>
+        <option>Tiruppur</option>
+        <option>Erode</option>
+        <option>Vellore</option>
+        <option>Thoothukudi</option>
+        <option>Thanjavur</option>
+        <option>Dindigul</option>
+        <option>Karur</option>
+        <option>Namakkal</option>
+        <option>Kanchipuram</option>
+        <option>Cuddalore</option>
+        <option>Nagercoil</option>
+        <option>Sivakasi</option>
+        <option>Virudhunagar</option>
+        <option>Pollachi</option>
+        <option>Hosur</option>
+        <option>Dharmapuri</option>
+        <option>Krishnagiri</option>
+        <option>Tenkasi</option>
+        <option>Tirunelveli</option>
+        <option>Kanyakumari</option>
+        <option>Ooty</option>
+        <option>Kodaikanal</option>
+        <option>Kumbakonam</option>
+        <option>Karaikudi</option>
+    </select>
+
+    <!-- Photo -->
+    <input
+        type="file"
+        id="photo"
+        accept="image/*"
+    >
+
+    <img id="preview">
+
+    <br><br>
+
+    <!-- Buttons -->
+    <button
+        class="generate-btn"
+        onclick="generateProfile()">
+        Generate Profile
+    </button>
+
+    <button
+        class="theme-btn"
+        onclick="toggleTheme()">
+        Dark / Light Mode
+    </button>
+
+    <button
+        class="save-btn"
+        onclick="saveProfile()">
+        Save Profile
+    </button>
+
+    <button
+        class="reset-btn"
+        onclick="resetProfile()">
+        Reset
+    </button>
+
+    <button
+        class="clear-btn"
+        onclick="clearProfile()">
+        🗑 Clear All
+    </button>
+
+    <br><br>
+
+    <!-- Search -->
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Student"
+        onkeyup="searchProfile()"
+    >
+
+    <!-- Generated Profile -->
+    <div id="profileCard"></div>
+
+    <!-- Saved Profile -->
+    <h2>Saved Profile</h2>
+
+    <div id="savedProfiles"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
